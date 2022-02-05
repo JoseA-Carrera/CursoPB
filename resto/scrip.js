@@ -29,13 +29,3 @@ for (let num = 1; num <= 100; num++) {
 
 //     }
 // }
-
-// for (var num = 1; num <= 100; num++) 
-// 	if(!(num % 3) && !(num % 5))
-// 		document.write("Fizz Buzz <br \>");
-// 	else if (!(num % 3))
-// 		document.write("Fizz <br \>");
-// 	else if (!(num % 5))
-// 		document.write("Buzz <br \>");
-// 	else
-// 		document.write(num + "<br \>");

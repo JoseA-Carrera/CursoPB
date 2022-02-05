@@ -1,6 +1,7 @@
-/*document.addEventListener("keydown", dibujarBlue);
-var cuadrito = document.getElementById("areaDeDibujo");
-var papel = cuadrito.getContext("2d");
+document.addEventListener("keydown", dibujarBlue);
+const cuadrito = document.getElementById("areaDeDibujo");
+const papel = cuadrito.getContext("2d");
+
 const teclas = {
     UP: 38,
     DOWN: 40,
@@ -14,7 +15,7 @@ var y = inicio;
 var n = 0;
 var tono = "black";
 
-dibujarlinea("red", x, x, x + 1, x + 1, papel);
+dibujarlinea("red", x - 2, y - 2, x + 2, y + 2, papel);
 
 var cabeza = parseInt(Math.ceil(Math.random() * 30)) * 10;
 var cola = parseInt(Math.ceil(Math.random() * 30)) * 10;
@@ -48,22 +49,22 @@ function dibujarBlue(evento) {
     switch (evento.keyCode) {
         case teclas.UP:
             dibujarlinea(tono, x, y, x, y - distancia, papel);
-            y = y - distancia;
+            y -= distancia;
             break;
         case teclas.DOWN:
             dibujarlinea(tono, x, y, x, y + distancia, papel);
-            y = y + distancia;
+            y += distancia;
             break;
         case teclas.LEFT:
             dibujarlinea(tono, x, y, x - distancia, y, papel);
-            x = x - distancia;
+            x -= distancia;
             break;
         case teclas.RIGHT:
             dibujarlinea(tono, x, y, x + distancia, y, papel);
-            x = x + distancia;
+            x += distancia;
             break;
         default:
-            console.log("No no no");
+            console.log("a tu puta casa animal!");
     }
 
     if (x == cabeza) {
@@ -71,18 +72,14 @@ function dibujarBlue(evento) {
             cabeza = parseInt(Math.ceil(Math.random() * 30)) * 10;
             cola = parseInt(Math.ceil(Math.random() * 30)) * 10;
             raton()
-        } else {
-
         }
-    } else {
-
     }
 }
 
 function raton() {
     var colorRaton = "black";
     dibujarPunto(colorRaton, cabeza - 2, cola - 2, cabeza + 2, cola + 2, papel);
-    n = n + 1
+    n += 1
     if (n < 5) {
         switch (n) {
             case n = 1:
@@ -105,18 +102,7 @@ function raton() {
         }
     } else {
         tono = "blue";
-        n = n - 5;
+        n -= 5;
     }
     console.log(`color: ${tono} = ${n}`);
-}*/
-
-
- document.addEventListener('click', randomNumber);
-
-function randomNumber() {
-    numMn = parseInt(prompt("el numero minimo sera: "));
-    numMx = parseInt(prompt("el numero maximo sera: "));
-    x = Math.ceil(Math.random() * (numMx - numMn + 1)) + numMn;
-    alert(`el numero random sera: ${x}`);
 }
-

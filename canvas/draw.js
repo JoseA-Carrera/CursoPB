@@ -5,10 +5,6 @@ var ancho = dibujo.width;
 var lienzo = dibujo.getContext("2d");
 boton.addEventListener("click", dibujoPorclick);
 
-/*dibujarLinea("black", 1, 1, 1, 300)
-dibujarLinea("black", 1, 300, 1, 600);
-dibujarLinea("black", 1200, 0, 1200, 300);*/
-
 function dibujarLinea(color, xinicial, yinicial, xfinal, yfinal) {
     lienzo.beginPath();
     lienzo.strokeStyle = color;
@@ -17,8 +13,6 @@ function dibujarLinea(color, xinicial, yinicial, xfinal, yfinal) {
     lienzo.stroke();
     lienzo.closePath();
 }
-
-
 
 function dibujoPorclick() {
     lienzo.clearRect(0,0,300,300);
