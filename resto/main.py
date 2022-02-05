@@ -2,6 +2,7 @@
 ran = int(input("numero de ciclos: "))
 div = int(input("numero Fizz: "))
 div1 = int(input("numero Buzz: "))
+print("ojo")
 
 
 
